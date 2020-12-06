@@ -38,11 +38,19 @@ jobs:
       - name: 'signin'
         run: python signin.py
       
+      - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
+          BUILD_SCRIPT: npm install && npm run build
+      
       - name: commit
         run: |
           git config --global user.email 290149290@qq.com
           git config --global user.name 290149290
-          #git add .
+          git add .
           git commit -m "update" -a || exit 0
       - name: Push changes
         uses: ad-m/github-push-action@master
