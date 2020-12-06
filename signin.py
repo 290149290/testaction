@@ -8,6 +8,7 @@ def save(file, res):
 
 def start():
     save("hello.txt", "world" + time.ctime())
+    print(time.ctime())
 
 
 if __name__ == '__main__':
