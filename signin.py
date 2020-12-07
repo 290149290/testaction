@@ -20,14 +20,18 @@ def 文件_读入文本(file):
             return f.read()
 
 
-def start_():
+def start_():  # ■这个是用来测试Github Action的每天自动定时执行 更新仓库文件的
+
     print(time.ctime(), "要写文件了,不知道能否成功")
     save("hello.txt", "nowtime:" + time.ctime())
     print(time.ctime(), "这里是写完了")
     print(os.path.isfile("hello.txt"))
     print(文件_读入文本("hello.txt"))
 
-def start():
+def start():  # ■这个是测试在Github Action的linux环境中 创建文件夹的  # ■顺便测试了 本地与github都有更新时的提交
+    # ■pycharm会自动提示 本地先merge 点击merge就行了 它会自动合并并提交
+    # ■测试发现 创建空文件夹不会被虚拟环境提交到仓库
+
     # 文件夹如果存在 exist_ok为True不会引发异常
     # os.makedirs("./txt文件夹",exist_ok=True) # --> 错了?
     file = "txt文件夹"
@@ -39,6 +43,13 @@ def start():
     save("./txt文件夹1/hello1.txt", "nowtime:" + time.ctime())
 
     os.makedirs("./txt文件夹2", exist_ok=True)  # --> 错了?  -->创建空文件夹不能push的吗?
+
+    for i in range(5):
+        if i % 2 ==0:
+            file = "./txt文件夹_测试_{}".format(i)
+            os.makedirs(file, exist_ok=True)
+            save(file, "{}_时间_nowtime:".format(i) + time.ctime())
+
 
 if __name__ == '__main__':
     start()
