@@ -39,10 +39,13 @@ jobs:
 
       - name: 'signin'
         # run: python signin.py
-        #python 爬虫_大乐透/bin2_自动下载_添加进数据库.py
+        # python 爬虫_大乐透/bin2_自动下载_添加进数据库.py
+        #        run: |
+        #          cd 测试
+        #          python 测试1.py
         run: |
-          cd 测试
-          python 测试1.py
+          cd 爬虫_双色球
+          python bin2_自动下载_添加进数据库.py
 
       - name: commit
         run: |
