@@ -49,6 +49,9 @@ def start():  # ■这个是测试在Github Action的linux环境中 创建文件
         if i % 2 ==0:
             file = "./txt文件夹_测试_{}".format(i)
             os.makedirs(file, exist_ok=True)
+            name = str(i)+".txt"
+            file = os.path.join(file,name)
+            print(file)
             save(file, "{}_时间_nowtime:".format(i) + time.ctime())
 
 
