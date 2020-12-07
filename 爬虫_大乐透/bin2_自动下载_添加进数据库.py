@@ -200,10 +200,19 @@ def main():
 
 if __name__ == '__main__':
     t = time.time()
+    import os
+
+    print(os.path.isfile("dlt.db"))
+    print(os.getcwd(),"当前目录")
+    print("准备chdir切换 看看")
+    os.chdir(os.getcwd())
+    print(os.getcwd(),"当前目录")
+    print(os.path.isfile("dlt.db"))
+
 
     # creat_sqlite()  # 数据库不存在 则创建数据库 创建表
-    creat_sqlite("dlt", "dlt", "开奖日期", "期号", "号码")
+    # creat_sqlite("dlt", "dlt", "开奖日期", "期号", "号码")
 
-    main()  # 主程序
+    # main()  # 主程序
 
     print("耗时", time.time() - t)
