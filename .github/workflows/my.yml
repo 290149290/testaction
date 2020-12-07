@@ -36,8 +36,9 @@ jobs:
         run: python -m pip install --upgrade DecryptLogin
 
       - name: 'signin'
-        run: python signin.py
-      
+        # run: python signin.py
+        run: python 爬虫_大乐透/bin2_自动下载_添加进数据库.py
+
       - name: commit
         run: |
           git config --global user.email 290149290@qq.com

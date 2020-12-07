@@ -28,10 +28,9 @@ def start_():  # ■这个是用来测试Github Action的每天自动定时执�
     print(os.path.isfile("hello.txt"))
     print(文件_读入文本("hello.txt"))
 
-def start():  # ■这个是测试在Github Action的linux环境中 创建文件夹的  # ■顺便测试了 本地与github都有更新时的提交
+def start____():  # ■这个是测试在Github Action的linux环境中 创建文件夹的  # ■顺便测试了 本地与github都有更新时的提交
     # ■pycharm会自动提示 本地先merge 点击merge就行了 它会自动合并并提交
     # ■测试发现 创建空文件夹不会被虚拟环境提交到仓库
-    # ■
 
     # 文件夹如果存在 exist_ok为True不会引发异常
     # os.makedirs("./txt文件夹",exist_ok=True) # --> 错了?
@@ -54,6 +53,9 @@ def start():  # ■这个是测试在Github Action的linux环境中 创建文件
             file = os.path.join(file,name)
             print(file)
             save(file, "{}_时间_nowtime:".format(i) + time.ctime())
+
+def start():
+    ...
 
 
 if __name__ == '__main__':
