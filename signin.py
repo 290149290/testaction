@@ -35,6 +35,9 @@ def start():
     # 测试linux虚拟环境下 新建文件夹
     save("./txt文件夹/hello.txt", "nowtime:" + time.ctime())
 
+    os.makedirs("./txt文件夹1", exist_ok=True)  # --> 错了?
+    save("./txt文件夹1/hello1.txt", "nowtime:" + time.ctime())
+
 
 if __name__ == '__main__':
     start()
