@@ -1,3 +1,6 @@
+
+#  @完成爬虫 爬取一个网页 取简单结果 保存到指定txt中  原因:爬虫  包括创建文件夹
+
 import time
 import os
 
@@ -17,12 +20,17 @@ def 文件_读入文本(file):
             return f.read()
 
 
-def start():
+def start_():
     print(time.ctime(), "要写文件了,不知道能否成功")
     save("hello.txt", "nowtime:" + time.ctime())
     print(time.ctime(), "这里是写完了")
     print(os.path.isfile("hello.txt"))
     print(文件_读入文本("hello.txt"))
+
+def start():
+    import os
+    os.makedirs("./txt文件夹",exist_ok=True)  # 文件夹如果存在 exist_ok为True不会引发异常
+
 
 
 if __name__ == '__main__':
