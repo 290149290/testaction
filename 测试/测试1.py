@@ -9,6 +9,7 @@ s.headers = {"User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/2
 
 # url = 'https://www.aaa.com'
 url = 'https://webapi.sporttery.cn/gateway/lottery/getHistoryPageListV1.qry?gameNo=85&provinceId=0&pageSize=30&isVerify=1&pageNo=1'
+url = 'https://www.cnblogs.com/wangchuang/p/11568423.html'
 r = s.get(url, verify=False)  # 使用该对象进行get/post操作  # session已经包含了headers参数 # 禁止ssl 解决https
 
 print(r.text)
