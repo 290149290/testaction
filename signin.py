@@ -45,10 +45,11 @@ def start():  # ■这个是测试在Github Action的linux环境中 创建文件
 
     os.makedirs("./txt文件夹2", exist_ok=True)  # --> 错了?  -->创建空文件夹不能push的吗?
 
-    for i in range(5):
+    for i in range(11,15):
+        file = "./txt文件夹_测试_{}".format(i)
+        os.makedirs(file, exist_ok=True)
+
         if i % 2 ==0:
-            file = "./txt文件夹_测试_{}".format(i)
-            os.makedirs(file, exist_ok=True)
             name = str(i)+".txt"
             file = os.path.join(file,name)
             print(file)
