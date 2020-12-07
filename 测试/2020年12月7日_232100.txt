@@ -1,56 +1,288 @@
-
 <!DOCTYPE html>
-<html>
-
+<html lang="zh-cn">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>è®¿é®æ¦æª</title>
-    <!-- æ¡æ¶å¸å±æ ·å¼ -->
-    <link rel="stylesheet" href="https://imgcache.qq.com/open_proj/proj_qcloud_v2/mc_2014/css/global.css">
-    <!-- ç»ä»¶æ ·å¼ -->
-    <link rel="stylesheet" href="https://imgcache.qq.com/open_proj/proj_qcloud_v2/bee/css/bee.css">
-    <link rel="stylesheet" href="https://imgcache.qq.com/open_proj/proj_qcloud_v2/mc_2014/waf/css/waf.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="origin" />
+    <meta name="description" content="在命令行中输入 1 安装requirements文件中的包" />
+    <meta property="og:description" content="在命令行中输入 1 安装requirements文件中的包" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>pycharm 生成requirements.txt - HOT SUMMER - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
+    
+    <link rel="stylesheet" href="/css/blog-common.min.css?v=R2wBwmwSMG0Sqiw8GFSVjHT4Payg_JFAn51R8XcuvN0" />
+    <link id="MainCss" rel="stylesheet" href="/skins/book/bundle-book.min.css?v=jeIWFbREsBywulLasTpkQaxky-lM6nSP4v7QSo89d0Y" />
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/book/bundle-book-mobile.min.css?v=oE-WHcI11pvUkPckXbIHx_nEt7ShbL7ORWDJcnq42Rk" />
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/wangchuang/rss" />
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/wangchuang/rsd.xml" />
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/wangchuang/wlwmanifest.xml" />
+    <script>
+        var currentBlogId = 115042;
+        var currentBlogApp = 'wangchuang';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'BOOK';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2019-09-22 05:45';
+        </script>
+    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
+    <script src="/js/blog-common.min.js?v=gWQ9VKr6FSwo14EgofSprzXJrAEO7ppQ1I5Or4uqKuo"></script>
+    
+    
+    
 </head>
-<body>
-<!-- container start -->
-<div id="jsContainer" class="container show-aside" style="top:0;">
-    <!-- main start -->
-    <div class="main">
-        <div class="manage-area">
-            <!-- contain start -->
-            <div class="manage-area-main" style="margin-top: 50px;">
-                <div class="attack-detail">
-                    <div class="tc-g">
-                        <div class="tc-g-u-1-1">
-                            <div class="waf-empty">
-                                <div class="console-empty">
-                                    <div class="product-intro-img">
-                                        <svg width="330" height="190">
-                                            <image xlink:href="https://imgcache.qq.com/qcloud/security/dest/html/img/empty-interception.svg" src="https://imgcache.qq.com/qcloud/security/dest/html/img/empty-interception.svg" width="330" height="190" />
-                                        </svg>
-                                    </div>
-                                    <div class="empty-text">
-                                        <div><strong>æ¨çè®¿é®ä¸å¹éç½ç«ç®¡çåè®¾ç½®çå®å¨ç­ç¥ï¼å¯è½ä¼å¯¹ç½ç«é æå±é©ï¼å·²è¢«ç®¡çåè®¾ç½®æ¦æªï¼</strong></div>
-                                        <div class="product-intro-text" style="text-align: left;margin: 20px;">
-                                            <p>å¯è½åå ï¼ è®¿é®ä¸­å¸¦æä¸åæ³çåæ°</p>
-                                            <p>å¦ä½è§£å³ï¼</p>
-                                            <p style="margin-left: 20px">1ï¼å¦æä½ è®¤ä¸ºè¿æ¯ä¸ä¸ªæ­£å¸¸çè®¿é®è¯·æ±ï¼è¯·èç³»ç½ç«ç®¡çåè§£å³æ­¤é®é¢ã</p>
-                                            <p style="margin-left: 20px">2ï¼å¦æä½ æ¯ç½ç«ç®¡çåï¼è¯·ä½ è°æ´è¾è®¯äºç½ç«ç®¡å®¶çç­ç¥ï¼åå¾<a href="https://console.qcloud.com/guanjia/waf/config">è¾è®¯äºç½ç«ç®¡å®¶æ§å¶å°</a>ã</p>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </div>
+<body class="has-navbar has-bannerbar">
+    <a name="top"></a>
+            <a href="https://brands.cnblogs.com/aws/free?source=blog-bannerbar" onclick="ga('send', 'event', 'Link', 'click', 'aws-pc-bannerbar')">
+                <div class="bannerbar aws forpc">
+                    <img class="left" src="https://common.cnblogs.com/images/banner/bannerbar-aws-logo.png" alt="" />
+                    <img class="right" src="https://common.cnblogs.com/images/banner/bannerbar-aws-ssh.png?v=2" alt="" />
+                </div>
+            </a>
+        <div id="bannerbar" class="bannerbar-mobile formobile">
+            <a href="https://brands.cnblogs.com/aws/free?source=mobile-banner" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'aws-mobile-bannerbar')"><img src="https://img2020.cnblogs.com/blog/35695/202012/35695-20201203212730693-184275650.png" alt="" /></a>
+        </div>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
+                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
+                        <button type="submit" id="zzk_search_button">
+                            <img src="/images/aggsite/search.svg" alt="搜索" />
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
+                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
+                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=oS4PkibyMjZ9rGD5XAcLt99uW_s76Javy2up4dbnZNY" alt="短消息" />
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" onclick="logout();">退出登录</a>
                         </div>
                     </div>
-                </div>
-            </div>
-            <!-- contain end -->
-        </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="login()">登录</a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <!-- main end -->
+
+    
+    <script type="text/javascript">
+	try {
+		if (screen.availWidth > 1200) {
+			document.getElementById("MainCss").href = '/skins/book/bundle-book-2.min.css';
+		}
+	} catch (e) { }
+</script>
+
+<div id="header">
+<div id="HeaderTitle">
+<div id="Title">
+<a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/wangchuang/">HOT SUMMER</a>
+
 </div>
-<!-- container end -->
+<div id="subTitle">每天都是不一样，积极的去感受生活</div>
+</div>
+</div>
+
+
+<div id="main">
+	<div id="post_detail">
+    <div class="post">
+        <h2>
+            
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wangchuang/p/11568423.html">
+    <span>pycharm 生成requirements.txt</span>
+    
+
+
+</a>
+
+        </h2>
+        
+<div id="cnblogs_post_body" class="blogpost-body">
+    <p>在命令行中输入</p>
+<pre class="prettyprint"><code class="has-numbering">pip freeze&gt;requirements.txt
+</code></pre>
+<ul class="pre-numbering">
+<li>1</li>
+</ul>
+<p>安装requirements文件中的包</p>
+<pre class="prettyprint"><code class="has-numbering">pip install -r requirements.txt</code></pre>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+    <div id="blog_post_info"></div>
+    <div class="clear"></div>
+    <div id="post_next_prev"></div>
+</div>
+        <p class="postfoot">
+            posted on 
+<span id="post-date">2019-09-22 17:45</span>&nbsp;
+<a href="https://www.cnblogs.com/wangchuang/">HOT SUMMER</a>&nbsp;
+阅读(<span id="post_view_count">937</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11568423" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(11568423);return false;">收藏</a>
+        </p>
+    </div>
+</div>
+
+
+<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 115042, cb_blogApp = 'wangchuang', cb_blogUserGuid = '85a72a91-bfc6-df11-ac81-842b2b196315';
+    var cb_entryId = 11568423, cb_entryCreatedDate = '2019-09-22 17:45', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
+    </div>
+    <div id="under_post_news"></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
+    </div>
+    <div id="under_post_kb"></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+   </script>
+</div>
+
+
+
+	<p id="footer">
+	Powered by: 
+	<br />
+	
+	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
+	<br />
+	Copyright &copy; 2020 HOT SUMMER
+<br /><span id="poweredby">Powered by .NET 5.0.0 on Kubernetes</span>
+
+</p>
+
+
+</div>
+<div id="rightmenu">
+	
+		<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
+		
+<h3>导航</h3>
+<ul>
+			<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+			<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/wangchuang/">
+首页</a>
+</li>
+			<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+			<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/HOT%20SUMMER">
+联系</a></li>
+			<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/wangchuang/rss/">
+订阅</a>
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/wangchuang/rss/">
+    <img src="/skins/book/images/xml.gif" alt="订阅" />
+</a></li>
+			<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		
+<h3>统计</h3>
+<ul>
+    <li>随笔 - 542</li>
+    <li>文章 - 2</li>
+    <li>评论 - 39</li>
+    <li>
+        引用 - 
+0
+    </li>
+</ul>
+
+
+		<div id="sidebar_news" class="newsItem">
+            <script>loadBlogNews();</script>
+</div>
+<div id="sidebar_c3"></div>
+		<div id="blog-sidecolumn"></div>
+                    <script>loadBlogSideColumn();</script>
+	
+</div>
+			
+			
+			
+			
+			 
+
+	
+
+
+    
 </body>
 </html>
