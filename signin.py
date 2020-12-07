@@ -38,6 +38,7 @@ def start():
     os.makedirs("./txt文件夹1", exist_ok=True)  # --> 错了?
     save("./txt文件夹1/hello1.txt", "nowtime:" + time.ctime())
 
+    os.makedirs("./txt文件夹2", exist_ok=True)  # --> 错了?  -->创建空文件夹不能push的吗?
 
 if __name__ == '__main__':
     start()
