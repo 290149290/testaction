@@ -28,9 +28,12 @@ def start_():
     print(文件_读入文本("hello.txt"))
 
 def start():
-    import os
-    os.makedirs("./txt文件夹",exist_ok=True)  # 文件夹如果存在 exist_ok为True不会引发异常
-
+    # 文件夹如果存在 exist_ok为True不会引发异常
+    # os.makedirs("./txt文件夹",exist_ok=True) # --> 错了?
+    file = "txt文件夹"
+    os.makedirs(file,exist_ok=True)  # 文件夹如果存在 exist_ok为True不会引发异常
+    # 测试linux虚拟环境下 新建文件夹
+    save("./txt文件夹/hello.txt", "nowtime:" + time.ctime())
 
 
 if __name__ == '__main__':
