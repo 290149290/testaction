@@ -1,288 +1,655 @@
-<!DOCTYPE html>
-<html lang="zh-cn">
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="referrer" content="origin" />
-    <meta name="description" content="在命令行中输入 1 安装requirements文件中的包" />
-    <meta property="og:description" content="在命令行中输入 1 安装requirements文件中的包" />
-    <meta http-equiv="Cache-Control" content="no-transform" />
-    <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>pycharm 生成requirements.txt - HOT SUMMER - 博客园</title>
-    <link id="favicon" rel="shortcut icon" href="//common.cnblogs.com/favicon.svg" type="image/svg+xml" />
-    
-    <link rel="stylesheet" href="/css/blog-common.min.css?v=R2wBwmwSMG0Sqiw8GFSVjHT4Payg_JFAn51R8XcuvN0" />
-    <link id="MainCss" rel="stylesheet" href="/skins/book/bundle-book.min.css?v=jeIWFbREsBywulLasTpkQaxky-lM6nSP4v7QSo89d0Y" />
-    
-    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="/skins/book/bundle-book-mobile.min.css?v=oE-WHcI11pvUkPckXbIHx_nEt7ShbL7ORWDJcnq42Rk" />
-    
-    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/wangchuang/rss" />
-    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/wangchuang/rsd.xml" />
-    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/wangchuang/wlwmanifest.xml" />
-    <script>
-        var currentBlogId = 115042;
-        var currentBlogApp = 'wangchuang';
-        var cb_enable_mathjax = false;
-        var isLogined = false;
-        var isBlogOwner = false;
-        var skinName = 'BOOK';
-        var visitorUserId = '';
-    </script>
-        <script>
-            var currentPostDateAdded = '2019-09-22 05:45';
-        </script>
-    <script src="https://common.cnblogs.com/scripts/jquery-2.2.0.min.js"></script>
-    <script src="/js/blog-common.min.js?v=gWQ9VKr6FSwo14EgofSprzXJrAEO7ppQ1I5Or4uqKuo"></script>
-    
-    
-    
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>双色球频道_往期回顾</title>
+<link rel="stylesheet" type="text/css" href="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/global.css"/>
+<link rel="stylesheet" type="text/css" href="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd.css"/>
+<style type="text/css">
+h3 { background:url(http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_29.jpg) repeat-x; text-align:center; border-top:solid 1px #c00; font-weight:bold; width:718px; font-size:14px; padding-top:7px; height:22px;}
+</style>
+
 </head>
-<body class="has-navbar has-bannerbar">
-    <a name="top"></a>
-            <a href="https://brands.cnblogs.com/aws/free?source=blog-bannerbar" onclick="ga('send', 'event', 'Link', 'click', 'aws-pc-bannerbar')">
-                <div class="bannerbar aws forpc">
-                    <img class="left" src="https://common.cnblogs.com/images/banner/bannerbar-aws-logo.png" alt="" />
-                    <img class="right" src="https://common.cnblogs.com/images/banner/bannerbar-aws-ssh.png?v=2" alt="" />
-                </div>
-            </a>
-        <div id="bannerbar" class="bannerbar-mobile formobile">
-            <a href="https://brands.cnblogs.com/aws/free?source=mobile-banner" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'aws-mobile-bannerbar')"><img src="https://img2020.cnblogs.com/blog/35695/202012/35695-20201203212730693-184275650.png" alt="" /></a>
-        </div>
-    <div id="top_nav" class="navbar forpc">
-        <nav id="nav_main" class="navbar-main">
-            <ul id="nav_left" class="navbar-list navbar-left">
-                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo.svg?v=R9M0WmLAIPVydmdzE2keuvnjl-bPR7_35oHqtiBzGsM" alt="博客园Logo" /></a></li>
-                <li><a href="/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
-                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
-                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
-                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
-                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
-                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
-            </ul>
-            <ul id="nav_right" class="navbar-list navbar-right">
-                <li>
-                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
-                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3" />
-                        <button type="submit" id="zzk_search_button">
-                            <img src="/images/aggsite/search.svg" alt="搜索" />
-                        </button>
-                    </form>
-                </li>
-                <li id="navbar_login_status" class="navbar-list">
-                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客">
-                        <img id="myblog_icon" class="navbar-icon" src="/images/aggsite/myblog.svg" alt="我的博客" />
-                    </a>
-                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息">
-                        <img id="msg_icon" class="navbar-icon" src="/images/aggsite/message.svg?v=oS4PkibyMjZ9rGD5XAcLt99uW_s76Javy2up4dbnZNY" alt="短消息" />
-                        <span id="msg_count" style="display: none"></span>
-                    </a>
-                    <div id="user_info" class="navbar-user-info dropdown">
-                        <a class="dropdown-button" href="https://home.cnblogs.com/">
-                            <img id="user_icon" class="navbar-avatar" src="/images/aggsite/avatar-default.svg" alt="用户头像" />
-                        </a>
-                        <div class="dropdown-menu">
-                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
-                            <a href="https://home.cnblogs.com/">我的园子</a>
-                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
-                            <a href="javascript:void(0)" onclick="logout();">退出登录</a>
-                        </div>
-                    </div>
-                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/">注册</a>
-                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="login()">登录</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-
-    
-    <script type="text/javascript">
-	try {
-		if (screen.availWidth > 1200) {
-			document.getElementById("MainCss").href = '/skins/book/bundle-book-2.min.css';
-		}
-	} catch (e) { }
-</script>
-
-<div id="header">
-<div id="HeaderTitle">
-<div id="Title">
-<a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/wangchuang/">HOT SUMMER</a>
-
-</div>
-<div id="subTitle">每天都是不一样，积极的去感受生活</div>
-</div>
-</div>
+<body>
 
 
-<div id="main">
-	<div id="post_detail">
-    <div class="post">
-        <h2>
-            
-<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/wangchuang/p/11568423.html">
-    <span>pycharm 生成requirements.txt</span>
-    
 
-
-</a>
-
-        </h2>
+   <table width="718" border="0" cellspacing="0" cellpadding="0" class="wqhgt">
+        <tr style=" background:url(http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_28.jpg) repeat-x;">
+          <th width="83" rowspan="2">开奖日期</th>
+          <th width="64" rowspan="2">期号</th>
+          <th width="203" rowspan="2">中奖号码</th>
+          <th width="92" rowspan="2">销售额(元)</th>
+          <th colspan="2">中奖注数</th>
+          <th width="65" rowspan="2">详细</th>
+        </tr>
+        <tr>
+          <th width="135" style="color:#F00">一等奖</th>
+          <th width="45" style="color:#00F">二等奖</th>
+        </tr>
         
-<div id="cnblogs_post_body" class="blogpost-body">
-    <p>在命令行中输入</p>
-<pre class="prettyprint"><code class="has-numbering">pip freeze&gt;requirements.txt
-</code></pre>
-<ul class="pre-numbering">
-<li>1</li>
-</ul>
-<p>安装requirements文件中的包</p>
-<pre class="prettyprint"><code class="has-numbering">pip install -r requirements.txt</code></pre>
-</div>
-<div id="MySignature"></div>
-<div class="clear"></div>
-<div id="blog_post_info_block">
-    <div id="blog_post_info"></div>
-    <div class="clear"></div>
-    <div id="post_next_prev"></div>
-</div>
-        <p class="postfoot">
-            posted on 
-<span id="post-date">2019-09-22 17:45</span>&nbsp;
-<a href="https://www.cnblogs.com/wangchuang/">HOT SUMMER</a>&nbsp;
-阅读(<span id="post_view_count">937</span>)&nbsp;
-评论(<span id="post_comment_count">0</span>)&nbsp;
-<a href="https://i.cnblogs.com/EditPosts.aspx?postid=11568423" rel="nofollow">编辑</a>&nbsp;
-<a href="javascript:void(0)" onclick="AddToWz(11568423);return false;">收藏</a>
-        </p>
-    </div>
-</div>
+        
+        <tr>
+          <td align="center">2020-12-06</td>
+          <td align="center">2020123</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">01</em>
+          
+          <em class="rr">03</em>
+          
+          <em class="rr">18</em>
+          
+          <em class="rr">19</em>
+          
+          <em class="rr">26</em>
+          
+          <em class="rr">29</em>
+                    
+          <em>03</em></td>
+          <td><strong>442,277,628</strong></td>
+          <td align="left" style="color:#999;"><strong>5</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">106</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-12-03</td>
+          <td align="center">2020122</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">12</em>
+          
+          <em class="rr">15</em>
+          
+          <em class="rr">17</em>
+          
+          <em class="rr">24</em>
+          
+          <em class="rr">26</em>
+          
+          <em class="rr">31</em>
+                    
+          <em>15</em></td>
+          <td><strong>416,050,434</strong></td>
+          <td align="left" style="color:#999;"><strong>7</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">484</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-12-01</td>
+          <td align="center">2020121</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">02</em>
+          
+          <em class="rr">04</em>
+          
+          <em class="rr">06</em>
+          
+          <em class="rr">21</em>
+          
+          <em class="rr">25</em>
+          
+          <em class="rr">29</em>
+                    
+          <em>03</em></td>
+          <td><strong>425,615,038</strong></td>
+          <td align="left" style="color:#999;"><strong>5</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">91</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-29</td>
+          <td align="center">2020120</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">01</em>
+          
+          <em class="rr">02</em>
+          
+          <em class="rr">03</em>
+          
+          <em class="rr">04</em>
+          
+          <em class="rr">09</em>
+          
+          <em class="rr">10</em>
+                    
+          <em>12</em></td>
+          <td><strong>470,788,664</strong></td>
+          <td align="left" style="color:#999;"><strong>28</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">535</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-26</td>
+          <td align="center">2020119</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">01</em>
+          
+          <em class="rr">09</em>
+          
+          <em class="rr">22</em>
+          
+          <em class="rr">28</em>
+          
+          <em class="rr">32</em>
+          
+          <em class="rr">33</em>
+                    
+          <em>15</em></td>
+          <td><strong>432,978,556</strong></td>
+          <td align="left" style="color:#999;"><strong>12</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">117</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-24</td>
+          <td align="center">2020118</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">11</em>
+          
+          <em class="rr">13</em>
+          
+          <em class="rr">19</em>
+          
+          <em class="rr">26</em>
+          
+          <em class="rr">30</em>
+          
+          <em class="rr">33</em>
+                    
+          <em>05</em></td>
+          <td><strong>419,968,358</strong></td>
+          <td align="left" style="color:#999;"><strong>4</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">114</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-22</td>
+          <td align="center">2020117</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">07</em>
+          
+          <em class="rr">08</em>
+          
+          <em class="rr">09</em>
+          
+          <em class="rr">10</em>
+          
+          <em class="rr">16</em>
+          
+          <em class="rr">27</em>
+                    
+          <em>07</em></td>
+          <td><strong>460,145,954</strong></td>
+          <td align="left" style="color:#999;"><strong>19</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">225</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-19</td>
+          <td align="center">2020116</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">05</em>
+          
+          <em class="rr">06</em>
+          
+          <em class="rr">14</em>
+          
+          <em class="rr">16</em>
+          
+          <em class="rr">19</em>
+          
+          <em class="rr">27</em>
+                    
+          <em>10</em></td>
+          <td><strong>434,234,564</strong></td>
+          <td align="left" style="color:#999;"><strong>9</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">172</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-17</td>
+          <td align="center">2020115</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">01</em>
+          
+          <em class="rr">04</em>
+          
+          <em class="rr">12</em>
+          
+          <em class="rr">20</em>
+          
+          <em class="rr">25</em>
+          
+          <em class="rr">32</em>
+                    
+          <em>02</em></td>
+          <td><strong>435,736,254</strong></td>
+          <td align="left" style="color:#999;"><strong>2</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">114</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-15</td>
+          <td align="center">2020114</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">01</em>
+          
+          <em class="rr">05</em>
+          
+          <em class="rr">11</em>
+          
+          <em class="rr">24</em>
+          
+          <em class="rr">30</em>
+          
+          <em class="rr">32</em>
+                    
+          <em>03</em></td>
+          <td><strong>476,450,128</strong></td>
+          <td align="left" style="color:#999;"><strong>16</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">171</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-12</td>
+          <td align="center">2020113</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">01</em>
+          
+          <em class="rr">03</em>
+          
+          <em class="rr">07</em>
+          
+          <em class="rr">10</em>
+          
+          <em class="rr">22</em>
+          
+          <em class="rr">32</em>
+                    
+          <em>11</em></td>
+          <td><strong>436,471,868</strong></td>
+          <td align="left" style="color:#999;"><strong>7</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">114</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-10</td>
+          <td align="center">2020112</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">02</em>
+          
+          <em class="rr">09</em>
+          
+          <em class="rr">12</em>
+          
+          <em class="rr">17</em>
+          
+          <em class="rr">28</em>
+          
+          <em class="rr">32</em>
+                    
+          <em>05</em></td>
+          <td><strong>426,910,448</strong></td>
+          <td align="left" style="color:#999;"><strong>14</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">263</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-08</td>
+          <td align="center">2020111</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">06</em>
+          
+          <em class="rr">09</em>
+          
+          <em class="rr">17</em>
+          
+          <em class="rr">22</em>
+          
+          <em class="rr">24</em>
+          
+          <em class="rr">26</em>
+                    
+          <em>16</em></td>
+          <td><strong>459,469,274</strong></td>
+          <td align="left" style="color:#999;"><strong>3</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">106</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-05</td>
+          <td align="center">2020110</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">02</em>
+          
+          <em class="rr">06</em>
+          
+          <em class="rr">09</em>
+          
+          <em class="rr">14</em>
+          
+          <em class="rr">22</em>
+          
+          <em class="rr">25</em>
+                    
+          <em>04</em></td>
+          <td><strong>365,150,166</strong></td>
+          <td align="left" style="color:#999;"><strong>9</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">102</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-03</td>
+          <td align="center">2020109</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">06</em>
+          
+          <em class="rr">13</em>
+          
+          <em class="rr">16</em>
+          
+          <em class="rr">20</em>
+          
+          <em class="rr">23</em>
+          
+          <em class="rr">32</em>
+                    
+          <em>13</em></td>
+          <td><strong>358,593,188</strong></td>
+          <td align="left" style="color:#999;"><strong>23</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">133</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-11-01</td>
+          <td align="center">2020108</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">10</em>
+          
+          <em class="rr">12</em>
+          
+          <em class="rr">15</em>
+          
+          <em class="rr">17</em>
+          
+          <em class="rr">23</em>
+          
+          <em class="rr">32</em>
+                    
+          <em>05</em></td>
+          <td><strong>398,129,794</strong></td>
+          <td align="left" style="color:#999;"><strong>18</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">123</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-10-29</td>
+          <td align="center">2020107</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">03</em>
+          
+          <em class="rr">09</em>
+          
+          <em class="rr">11</em>
+          
+          <em class="rr">24</em>
+          
+          <em class="rr">25</em>
+          
+          <em class="rr">28</em>
+                    
+          <em>16</em></td>
+          <td><strong>372,099,740</strong></td>
+          <td align="left" style="color:#999;"><strong>5</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">185</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-10-27</td>
+          <td align="center">2020106</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">02</em>
+          
+          <em class="rr">04</em>
+          
+          <em class="rr">11</em>
+          
+          <em class="rr">15</em>
+          
+          <em class="rr">18</em>
+          
+          <em class="rr">28</em>
+                    
+          <em>10</em></td>
+          <td><strong>362,151,946</strong></td>
+          <td align="left" style="color:#999;"><strong>14</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">123</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-10-25</td>
+          <td align="center">2020105</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">06</em>
+          
+          <em class="rr">14</em>
+          
+          <em class="rr">19</em>
+          
+          <em class="rr">20</em>
+          
+          <em class="rr">22</em>
+          
+          <em class="rr">24</em>
+                    
+          <em>01</em></td>
+          <td><strong>399,513,718</strong></td>
+          <td align="left" style="color:#999;"><strong>6</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">117</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        <tr>
+          <td align="center">2020-10-22</td>
+          <td align="center">2020104</td>
+          <td align="center" style="padding-left:10px;">
+          
+          <em class="rr">04</em>
+          
+          <em class="rr">08</em>
+          
+          <em class="rr">10</em>
+          
+          <em class="rr">16</em>
+          
+          <em class="rr">27</em>
+          
+          <em class="rr">29</em>
+                    
+          <em>09</em></td>
+          <td><strong>371,069,028</strong></td>
+          <td align="left" style="color:#999;"><strong>9</strong>
+          
+          </td>
+          <td align="center"><strong class="rc">102</strong></td>
+          <td align="center">
+          <a href="http://www.zhcw.com/ssq/kjgg/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_42.jpg" width="16" height="16" align="absmiddle" title="详细信息"/></a>
+          <a href="http://www.zhcw.com/video/kaijiangshipin/" target="_blank"><img src="http://images.zhcw.com/zhcw2010/kaijiang/zhcw/ssqpd_43.jpg" width="16" height="16" align="absmiddle" title="开奖视频"/></a>
+          </td>
+        </tr>
+        
+        
+        
+       
+       
+        <tr>
+          <td colspan="7" align="center" style="background:#fdf2e3;"><p class="zhu"></p>
+          
+     
 
-
-<script src="https://common.cnblogs.com/highlight/10.3.1/highlight.min.js"></script>
-<script>markdown_highlight();</script>
-<script>
-    var allowComments = true, cb_blogId = 115042, cb_blogApp = 'wangchuang', cb_blogUserGuid = '85a72a91-bfc6-df11-ac81-842b2b196315';
-    var cb_entryId = 11568423, cb_entryCreatedDate = '2019-09-22 17:45', cb_postType = 1;
-    updatePostStats(
-        [cb_entryId],
-        function(id, count) { $("#post_view_count").text(count) },
-        function(id, count) { $("#post_comment_count").text(count) })
-</script>
-<a name="!comments"></a>
-<div id="blog-comments-placeholder"></div>
-<div id="comment_form" class="commentform">
-    <a name="commentform"></a>
-    <div id="divCommentShow"></div>
-    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
-    <div id="comment_form_container"></div>
-    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
-    <div id="ad_t2"></div>
-    <div id="opt_under_post"></div>
-    <div id="cnblogs_c1" class="c_ad_block">
-        <div id='div-gpt-ad-1592365906576-0' style='width: 300px; height: 250px;'></div>
-    </div>
-    <div id="under_post_news"></div>
-    <div id="cnblogs_c2" class="c_ad_block">
-        <div id='div-gpt-ad-1592366332455-0' style='width: 468px; height: 60px;'></div>
-    </div>
-    <div id="under_post_kb"></div>
-    <div id="HistoryToday" class="c_ad_block"></div>
-    <script type="text/javascript">
-       var commentManager = new blogCommentManager();
-       commentManager.renderComments(0);
-       fixPostBody();
-       deliverBigBanner();
-setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
-       deliverC1C2();
-       loadNewsAndKb();
-       loadBlogSignature();
-LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
-       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
-       loadOptUnderPost();
-       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
-   </script>
-</div>
-
-
-
-	<p id="footer">
-	Powered by: 
-	<br />
-	
-	<a href="https://www.cnblogs.com/" id="footer_site_link">博客园</a>
-	<br />
-	Copyright &copy; 2020 HOT SUMMER
-<br /><span id="poweredby">Powered by .NET 5.0.0 on Kubernetes</span>
-
-</p>
-
-
-</div>
-<div id="rightmenu">
-	
-		<div id="blog-calendar" style="display:none"></div><script>loadBlogDefaultCalendar();</script>
-		
-<h3>导航</h3>
-<ul>
-			<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
-博客园</a>
-</li>
-			<li>
-<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/wangchuang/">
-首页</a>
-</li>
-			<li>
-
-<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
-新随笔</a>
-</li>
-			<li>
-<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/HOT%20SUMMER">
-联系</a></li>
-			<li>
-<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/wangchuang/rss/">
-订阅</a>
-<a id="blog_nav_rss_image" href="https://www.cnblogs.com/wangchuang/rss/">
-    <img src="/skins/book/images/xml.gif" alt="订阅" />
-</a></li>
-			<li>
-<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
-管理</a>
-</li>
-</ul>
-
-
-		
-<h3>统计</h3>
-<ul>
-    <li>随笔 - 542</li>
-    <li>文章 - 2</li>
-    <li>评论 - 39</li>
-    <li>
-        引用 - 
-0
-    </li>
-</ul>
-
-
-		<div id="sidebar_news" class="newsItem">
-            <script>loadBlogNews();</script>
-</div>
-<div id="sidebar_c3"></div>
-		<div id="blog-sidecolumn"></div>
-                    <script>loadBlogSideColumn();</script>
-	
-</div>
-			
-			
-			
-			
-			 
-
-	
-
-
-    
+          <p class="pg"> 共<strong>132</strong> 页 /<strong>2633 </strong>条记录 <strong><a href="/zhcw/inc/ssq/ssq_wqhg.jsp">首页</a></strong> <strong><a href="/zhcw/inc/ssq/ssq_wqhg.jsp?pageNum=1">上一页</a></strong> <strong><a href="/zhcw/inc/ssq/ssq_wqhg.jsp?pageNum=2">下一页</a></strong> <strong><a href="/zhcw/inc/ssq/ssq_wqhg.jsp?pageNum=132">末页</a></strong> 当前第<strong> 1 </strong>页</p></td>
+        </tr>
+      </table>
 </body>
 </html>
+
