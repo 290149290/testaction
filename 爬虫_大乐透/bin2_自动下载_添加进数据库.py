@@ -201,6 +201,7 @@ def main():
 if __name__ == '__main__':
     t = time.time()
     import os
+    import sys
 
     print(os.path.isfile("dlt.db"))
     print(os.getcwd(),"当前目录")
@@ -208,11 +209,15 @@ if __name__ == '__main__':
     os.chdir(os.getcwd())
     print(os.getcwd(),"当前目录")
     print(os.path.isfile("dlt.db"))
+    print("' --------------------------+----------------------------")
+    print(sys.path[0]) # 脚本入口文件所在目录 C:\Users\Administrator\PycharmProjects\testaction\爬虫_大乐透
+    print(os.getcwd())  # 脚本调用所在目录，敲命令的目录  C:\Users\Administrator\PycharmProjects\testaction\爬虫_大乐透
+    print(__file__)  # 脚本入口文件所在目录及文件名  # C:/Users/Administrator/PycharmProjects/testaction/爬虫_大乐透/bin2_自动下载_添加进数据库.py
 
 
     # creat_sqlite()  # 数据库不存在 则创建数据库 创建表
-    # creat_sqlite("dlt", "dlt", "开奖日期", "期号", "号码")
+    creat_sqlite("dlt", "dlt", "开奖日期", "期号", "号码")
 
-    # main()  # 主程序
+    main()  # 主程序
 
     print("耗时", time.time() - t)
