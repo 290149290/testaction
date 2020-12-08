@@ -24,6 +24,40 @@ header = {
     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0"
 }
 
+header = {
+    # "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Accept-Encoding": "utf-8",
+    "Accept-Language": "zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3",
+    "Connection": "keep-alive",
+    # "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0",
+    "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1",
+    "Pragma": "no-cache",
+    "Origin": "https://static.sporttery.cn/",
+    "Referer": "https://static.sporttery.cn/",
+    "Sec-Fetch-Site": "same-site",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Dest": "empty",
+}
+
+'''
+GET /gateway/lottery/getHistoryPageListV1.qry?gameNo=85&provinceId=0&pageSize=30&isVerify=1&pageNo=1 HTTP/1.1
+Host: webapi.sporttery.cn
+Connection: keep-alive
+Pragma: no-cache
+Cache-Control: no-cache
+Accept: application/json, text/javascript, */*; q=0.01
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1
+DNT: 1
+Origin: https://static.sporttery.cn
+Sec-Fetch-Site: same-site
+Sec-Fetch-Mode: cors
+Sec-Fetch-Dest: empty
+Referer: https://static.sporttery.cn/
+Accept-Encoding: gzip, deflate, br
+Accept-Language: zh-CN,zh;q=0.9
+'''
+
 
 def get(url):
     # 构造req 包含url,header信息的对象
@@ -203,16 +237,16 @@ if __name__ == '__main__':
     import os
     import sys
 
-    print(os.path.isfile("dlt.db"))
-    print(os.getcwd(),"当前目录")
-    print("准备chdir切换 看看")
-    os.chdir(os.getcwd())
-    print(os.getcwd(),"当前目录")
-    print(os.path.isfile("dlt.db"))
-    print("' --------------------------+----------------------------")
-    print(sys.path[0]) # 脚本入口文件所在目录 C:\Users\Administrator\PycharmProjects\testaction\爬虫_大乐透
-    print(os.getcwd())  # 脚本调用所在目录，敲命令的目录  C:\Users\Administrator\PycharmProjects\testaction\爬虫_大乐透
-    print(__file__)  # 脚本入口文件所在目录及文件名  # C:/Users/Administrator/PycharmProjects/testaction/爬虫_大乐透/bin2_自动下载_添加进数据库.py
+    # print(os.path.isfile("dlt.db"))
+    # print(os.getcwd(),"当前目录")
+    # print("准备chdir切换 看看")
+    # os.chdir(os.getcwd())
+    # print(os.getcwd(),"当前目录")
+    # print(os.path.isfile("dlt.db"))
+    # print("' --------------------------+----------------------------")
+    # print(sys.path[0]) # 脚本入口文件所在目录 C:\Users\Administrator\PycharmProjects\testaction\爬虫_大乐透
+    # print(os.getcwd())  # 脚本调用所在目录，敲命令的目录  C:\Users\Administrator\PycharmProjects\testaction\爬虫_大乐透
+    # print(__file__)  # 脚本入口文件所在目录及文件名  # C:/Users/Administrator/PycharmProjects/testaction/爬虫_大乐透/bin2_自动下载_添加进数据库.py
 
 
     # creat_sqlite()  # 数据库不存在 则创建数据库 创建表
