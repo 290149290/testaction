@@ -15,21 +15,24 @@ import urllib.parse
 # 获得cookie管理器
 cj = http.cookiejar.CookieJar()
 opener = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(cj))
-
-header = {
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Encoding": "utf-8",
-    "Accept-Language": "zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3",
-    "Connection": "keep-alive",
-    "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0"
-}
+#
+# header = {
+#     "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+#     "Accept-Encoding": "utf-8",
+#     "Accept-Language": "zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3",
+#     "Connection": "keep-alive",
+#     "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0"
+# }
 
 header = {
     # "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
     "Accept": "application/json, text/javascript, */*; q=0.01",
-    "Accept-Encoding": "utf-8",
-    "Accept-Language": "zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3",
+    # "Accept-Encoding": "utf-8",
+    "Accept-Encoding": "gzip, deflate, br",
+    # "Accept-Language": "zh-cn,zh;q=0.8,en-us;q=0.5,en;q=0.3",
+    "Accept-Language": "zh-CN,zh;q=0.9",
     "Connection": "keep-alive",
+    "DNT": "1",
     # "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:32.0) Gecko/20100101 Firefox/32.0",
     "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1",
     "Pragma": "no-cache",
@@ -38,6 +41,7 @@ header = {
     "Sec-Fetch-Site": "same-site",
     "Sec-Fetch-Mode": "cors",
     "Sec-Fetch-Dest": "empty",
+    "Host": "webapi.sporttery.cn",
 }
 
 '''

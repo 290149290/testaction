@@ -20,7 +20,7 @@ def save(file, res):
         f.write(res)
 
 # save("2020年12月7日_232100.txt", r.text)
-save("2020年12月8日.txt", r.json)
+save("2020年12月8日.txt.html", r.json)
 
 #
 # if __name__ == '__main__':
