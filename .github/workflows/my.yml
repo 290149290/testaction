@@ -44,9 +44,9 @@ jobs:
         #          cd 测试
         #          python 测试1.py
         run: |
-#          cd 爬虫_双色球
-          cd 爬虫_大乐透
-          python bin_自动下载_添加进数据库.py
+          #          cd 爬虫_双色球
+               cd 爬虫_大乐透
+               python bin_自动下载_添加进数据库.py
 
       - name: commit
         run: |
